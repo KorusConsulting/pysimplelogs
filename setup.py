@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name='pysimplelogs',
-    version='0.3.2',
+    version='0.3.3',
     url='https://github.com/Se7ge/pysimplelogs',
     author='Dmitry Timofeev',
     description='Python client library for [Simplelogs] [sl] logging system.',
