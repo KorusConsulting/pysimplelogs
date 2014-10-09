@@ -58,12 +58,12 @@ class SimpleLogger(object):
             # create handler
             handler = SimplelogHandler(url, owner)
             # create formatter
-            formatter = logging.Formatter(u'%(module) - %(funcName) - %(asctime)s - %(levelname)s - %(message)s')
+            formatter = logging.Formatter(u'%(module) - %(funcName)s - %(asctime)s - %(levelname)s - %(message)s')
         else:
             # create handler and set level to debug
             handler = logging.StreamHandler()
             # create formatter
-            formatter = logging.Formatter(u'%(module) - %(funcName) - %(asctime)s - %(name)s - %(levelname)s - %(message)s')
+            formatter = logging.Formatter(u'%(module) - %(funcName)s - %(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
         # set handler level to debug
         handler.setLevel(logging.DEBUG)
