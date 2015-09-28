@@ -210,5 +210,10 @@ def send(self, owner, data, tags=[]):
     """Creating worker for sending message as a new process and return."""
     worker = Worker(self.method_name, owner, data, self.url, tags)
     #TODO Add queue.
-    multiprocessing.Process(target=worker.send).start()
+    try:
+        multiprocessing.Process(target=worker.send).start()
+    except AssertionError as e:
+        # https://github.com/celery/celery/issues/1709
+        print e
+        worker.send()
     return
